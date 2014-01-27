@@ -1,13 +1,141 @@
----
-layout: default
-title: Your New Jekyll Site
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Slideshow</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="thumbs">
+
+        <div id="progress-wrapper">
+          <div id="progress" data-0p="width: 0%;" data-end="width: 100%;">
+            <span>1</span>
+            /5
+          </div>
+        </div>
+      </div>
+
+      <div id="slideshow">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="skrollr.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      {
+                        s: "http://farm3.staticflickr.com/2277/5791358509_8fe66eea70_b.jpg",
+                        t: "http://farm3.staticflickr.com/2277/5791358509_8fe66eea70_t.jpg"
+                      },
+                      {
+                        s: "http://farm3.staticflickr.com/2557/5791360285_6d63226894_b.jpg",
+                        t: "http://farm3.staticflickr.com/2557/5791360285_6d63226894_t.jpg"
+                      },
+                      {
+                        s: "http://farm3.staticflickr.com/2307/5791362021_85a547068e_b.jpg",
+                        t: "http://farm3.staticflickr.com/2307/5791362021_85a547068e_t.jpg"
+                      },
+                      {
+                        s: "http://farm6.staticflickr.com/5264/5791922360_431c5a5689_b.jpg",
+                        t: "http://farm6.staticflickr.com/5264/5791922360_431c5a5689_t.jpg"
+                      },
+                      {
+                        s: "http://farm4.staticflickr.com/3243/5791365703_88709afc31_b.jpg",
+                        t: "http://farm4.staticflickr.com/3243/5791365703_88709afc31_t.jpg"
+                      },
+                      {
+                        s: "http://farm4.staticflickr.com/3636/5791367277_175e406ce8_b.jpg",
+                        t: "http://farm4.staticflickr.com/3636/5791367277_175e406ce8_t.jpg"
+                      },
+                      {
+                        s: "http://farm4.staticflickr.com/3338/5791927540_3450a259aa_b.jpg",
+                        t: "http://farm4.staticflickr.com/3338/5791927540_3450a259aa_t.jpg"
+                      },
+                      {
+                        s: "http://farm4.staticflickr.com/3610/5791929392_26f8336098_b.jpg",
+                        t:"http://farm4.staticflickr.com/3610/5791929392_26f8336098_t.jpg"
+                      },
+                      {
+                        s: "http://farm4.staticflickr.com/3235/5791931380_df5cdf71cc_b.jpg",
+                        t: "http://farm4.staticflickr.com/3235/5791931380_df5cdf71cc_t.jpg"
+                      },
+                      {
+                        s: "http://farm6.staticflickr.com/5026/5791933384_ffdb8a35ce_b.jpg",
+                        t: "http://farm6.staticflickr.com/5026/5791933384_ffdb8a35ce_t.jpg"
+                      }
+                   ];
+
+      var thumbs_container = "thumbs";
+      var slideshow_container = "slideshow";
+      var screens_per_slide = 1.5;
+      var transition = .5;
+
+      var skrollr_slider = {
+        slides: slides,
+        defaults: {
+          thumbs_container: 'thumbs',
+          slideshow_container: 'slideshow',
+          screens_per_slide: 100,
+          screens_per_transition: 50
+        }
+      };
+
+      resizeThumbsContainer = function() {
+        var w = $(window).width();
+        var img_w = $(window).height() * 0.98 / 680 * 1024;
+
+        $('#thumbs').width(w * 0.97 - img_w);
+        $('#slideshow').width(img_w);
+      }
+
+      var initSlides = function() {
+        $.each(slides, function(index, value) {
+          $('#' + skrollr_slider.defaults.thumbs_container).append(
+            '<img data-thumb-number="' + index + '" ' +
+            (index == 0 ? '' : 'data-' + transition_start(index) + 'p="border-color: rgb(18, 18, 18);"' ) + 
+            ' data-' + screens(index) + 
+            'p="border-color: rgb(255, 255, 255);" data-' + screens(index + 1) + 
+            'p="border-color: rgb(18, 18, 18)" src="' + value.t + '" />');
+
+          $('#' + skrollr_slider.defaults.slideshow_container).append(
+            '<div id="s' + index + '" style="z-index:' + (slides.length - index) + '" ' +
+            //'data-' + screens(index) + 'p="" ' + 
+            'data-' + transition_start(index + 1) + 
+            'p="opacity: 1;" data-' + screens(index + 1) + 
+            'p="opacity: 0" > <img class="slide" src="' + value.s + '"></div>');
+        });
+      };
+
+      var screens = function(index) {
+        return index * (skrollr_slider.defaults.screens_per_slide + skrollr_slider.defaults.screens_per_transition);
+      };
+
+      var transition_start = function(index) {
+        return screens(index) - skrollr_slider.defaults.screens_per_transition;
+      };
+
+      $().ready(function(){
+        initSlides();
+        $('#thumbs > img').click(function() {
+          var top = $(this).data('thumb-number') * $(window).height() * (skrollr_slider.defaults.screens_per_slide + skrollr_slider.defaults.screens_per_transition) / 100;
+          $(window).scrollTop(top);
+        })
+
+        skrollr.init();
+
+        resizeThumbsContainer();
+        $(window).resize(resizeThumbsContainer);
+      });
+    </script>
+  </body>
+</html>

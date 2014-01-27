@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18, 18, 18);
+}
+
+#thumbs {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+}
+
+#thumbs > img {
+  border: 3px solid rgb(18, 18, 18);
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 1px;
+}
+
+#progress-wrapper {
+  border: 1px solid white;
+  margin-bottom: 5px;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+#progress {
+  height: 20px;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+#slideshow {
+  position: fixed;
+  height: 98%;
+  right: 1%;
+  top: 1%;
+}
+
+#slideshow > div {
+  position: absolute;
+  background-color: rgb(18, 18, 18);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  height: 100%;
+}
