@@ -5,20 +5,27 @@ html, body {
   background-color: rgb(18, 18, 18);
 }
 
-#thumbs {
+#nav {
   position: fixed;
   top: 1%;
   left: 1%;
 }
 
-#thumbs > img {
-  border: 3px solid rgb(18, 18, 18);
-  cursor: pointer;
-  vertical-align: middle;
-  margin: 1px;
+#controls {
+  color: white;
 }
 
-#progress-wrapper {
+#slide-number > span {
+  position: absolute;
+  text-align: right;
+  width: 30px;
+}
+
+#slide-number > div {
+  margin-left: 35px;
+}
+
+#progress-bar {
   border: 1px solid white;
   margin-bottom: 5px;
   background-color: rgba(0, 255, 0, 0.1);
@@ -27,8 +34,14 @@ html, body {
 #progress {
   height: 20px;
   background-color: green;
-  color: white;
   font-weight: bold;
+}
+
+#thumbs > img {
+  border: 3px solid rgb(18, 18, 18);
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 1px;
 }
 
 #slideshow {
@@ -49,4 +62,10 @@ html, body {
 .slide {
   position: relative;
   height: 100%;
+}
+
+
+
+#logo {
+  height: 40px;
 }
