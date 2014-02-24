@@ -31,50 +31,20 @@
     <script type="text/javascript">
 
       var slides = [
-                      {
-                        s: "http://farm3.staticflickr.com/2277/5791358509_8fe66eea70_b.jpg",
-                        t: "http://farm3.staticflickr.com/2277/5791358509_8fe66eea70_t.jpg"
-                      },
-                      {
-                        s: "http://farm3.staticflickr.com/2557/5791360285_6d63226894_b.jpg",
-                        t: "http://farm3.staticflickr.com/2557/5791360285_6d63226894_t.jpg"
-                      },
-                      {
-                        s: "http://farm3.staticflickr.com/2307/5791362021_85a547068e_b.jpg",
-                        t: "http://farm3.staticflickr.com/2307/5791362021_85a547068e_t.jpg"
-                      },
-                      {
-                        s: "http://farm6.staticflickr.com/5264/5791922360_431c5a5689_b.jpg",
-                        t: "http://farm6.staticflickr.com/5264/5791922360_431c5a5689_t.jpg"
-                      },
-                      {
-                        s: "http://farm4.staticflickr.com/3243/5791365703_88709afc31_b.jpg",
-                        t: "http://farm4.staticflickr.com/3243/5791365703_88709afc31_t.jpg"
-                      },
-                      {
-                        s: "http://farm4.staticflickr.com/3636/5791367277_175e406ce8_b.jpg",
-                        t: "http://farm4.staticflickr.com/3636/5791367277_175e406ce8_t.jpg"
-                      },
-                      {
-                        s: "http://farm4.staticflickr.com/3338/5791927540_3450a259aa_b.jpg",
-                        t: "http://farm4.staticflickr.com/3338/5791927540_3450a259aa_t.jpg"
-                      },
-                      {
-                        s: "http://farm4.staticflickr.com/3610/5791929392_26f8336098_b.jpg",
-                        t:"http://farm4.staticflickr.com/3610/5791929392_26f8336098_t.jpg"
-                      },
-                      {
-                        s: "http://farm4.staticflickr.com/3235/5791931380_df5cdf71cc_b.jpg",
-                        t: "http://farm4.staticflickr.com/3235/5791931380_df5cdf71cc_t.jpg"
-                      },
-                      {
-                        s: "http://farm6.staticflickr.com/5026/5791933384_ffdb8a35ce_b.jpg",
-                        t: "http://farm6.staticflickr.com/5026/5791933384_ffdb8a35ce_t.jpg"
-                      }
+                      "http://farm3.staticflickr.com/2277/5791358509_8fe66eea70", 
+                      "http://farm3.staticflickr.com/2557/5791360285_6d63226894",
+                      "http://farm3.staticflickr.com/2307/5791362021_85a547068e",
+                      "http://farm6.staticflickr.com/5264/5791922360_431c5a5689",
+                      "http://farm4.staticflickr.com/3243/5791365703_88709afc31",
+                      "http://farm4.staticflickr.com/3636/5791367277_175e406ce8",
+                      "http://farm4.staticflickr.com/3338/5791927540_3450a259aa",
+                      "http://farm4.staticflickr.com/3610/5791929392_26f8336098",
+                      "http://farm4.staticflickr.com/3235/5791931380_df5cdf71cc",
+                      "http://farm6.staticflickr.com/5026/5791933384_ffdb8a35ce"
                    ];
 
       $().ready(function() {
-        $.skrollrSlideshow(slides);
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
       });
 
     </script>
