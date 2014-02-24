@@ -26,6 +26,7 @@
     </div>
 
     <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript" src="skrollr.slideshow.js"></script>
 
     <script type="text/javascript">
 
@@ -72,78 +73,10 @@
                       }
                    ];
 
-      var skrollr_slider = {
-        slides: slides,
-        defaults: {
-          thumbs_container: 'thumbs',
-          slideshow_container: 'slideshow',
-          controls_container: 'controls',
-          screens_per_slide: 100,
-          screens_per_transition: 50
-        }
-      };
-
-      resizeThumbsContainer = function() {
-        var w = $(window).width();
-        var img_w = $(window).height() * 0.98 / 680 * 1024;
-
-        $('#thumbs').width(w * 0.97 - img_w);
-        $('#slideshow').width(img_w);
-      }
-
-      var initSlides = function() {
-        $('#' + skrollr_slider.defaults.controls_container).append(
-          '<span><span id="slide-number"></span></span>' +
-          '<div id="progress-bar">' +
-            '<div id="progress" data-0p="width: 0%;" data-end="width: 100%;"></div>' +
-          '</div>');
-
-        $.each(slides, function(index, value) {
-          $('#' + skrollr_slider.defaults.thumbs_container).append(
-            '<img data-thumb-number="' + index + '" ' +
-            (index == 0 ? '' : 'data-' + transition_start(index) + 'p="border-color: rgb(18, 18, 18);" ' ) + 
-            'data-' + screens(index) + 'p="border-color: rgb(255, 255, 255);" ' +
-            'data-' + screens(index + 1) + 'p="border-color: rgb(18, 18, 18)" src="' + value.t + '" />');
-
-          $('#' + skrollr_slider.defaults.slideshow_container).append(
-            '<div id="s' + index + '" style="z-index:' + (slides.length - index) + '" ' +
-            //'data-' + screens(index) + 'p="" ' + 
-            'data-' + transition_start(index + 1) + 'p="opacity: 1;" ' +
-            'data-' + screens(index + 1) + 'p="opacity: 0" >' +
-              '<img class="slide" src="' + value.s + '">' +
-            '</div>');
-
-          $('#slide-number').append(
-            '<span style="z-index:' + (slides.length - index) + '" ' +
-            (index == 0 ? '' : 'data-' + transition_start(index) + 'p="opacity: 0;" ' ) + 
-            'data-' + screens(index) + 'p="opacity: 1;" ' +
-            (index == slides.length - 1 ? '>' : 'data-' + screens(index + 1) + 'p="opacity: 0;">') +
-            (index + 1) + '</span>');
-        });
-
-        $('#slide-number').append('<div>/ ' + slides.length + '</div>');
-      };
-
-      var screens = function(index) {
-        return index * (skrollr_slider.defaults.screens_per_slide + skrollr_slider.defaults.screens_per_transition);
-      };
-
-      var transition_start = function(index) {
-        return screens(index) - skrollr_slider.defaults.screens_per_transition;
-      };
-
-      $().ready(function(){
-        initSlides();
-        $('#thumbs > img').click(function() {
-          var top = $(this).data('thumb-number') * $(window).height() * (skrollr_slider.defaults.screens_per_slide + skrollr_slider.defaults.screens_per_transition) / 100;
-          $(window).scrollTop(top);
-        })
-
-        skrollr.init();
-
-        resizeThumbsContainer();
-        $(window).resize(resizeThumbsContainer);
+      $().ready(function() {
+        $.skrollrSlideshow(slides);
       });
+
     </script>
   </body>
 </html>
