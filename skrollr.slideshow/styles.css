@@ -37,6 +37,12 @@ html, body {
   background-color: #909090;
 }
 
+#thumbs {
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 #thumbs > img {
   border: 3px solid #121212;
   cursor: pointer;

@@ -18,12 +18,14 @@
 
     var resizeThumbsContainer = function() {
       var windowWidth = $(window).width();
-      var imageWidth = $(window).height() * 0.98 / 680 * 1024;
+      var windowHeight = $(window).height();
+      var imageWidth = windowHeight * 0.98 / 680 * 1024;
       var navWidth = windowWidth * 0.97 - imageWidth;
 
       $(options.navContainer).width(navWidth);
       $(options.slideshowContainer).width(imageWidth);
       $(options.instructionsContainer).width(imageWidth);
+      $(options.thumbsContainer).height(windowHeight - $(options.thumbsContainer).position().top - 50);
     };
 
     var screens = function(index) {
