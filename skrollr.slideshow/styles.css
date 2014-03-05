@@ -2,7 +2,8 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
+  color: #C0C0C0;
 }
 
 #nav {
@@ -11,8 +12,8 @@ html, body {
   left: 1%;
 }
 
-#controls {
-  color: white;
+#slide-number {
+  margin-bottom: 5px;
 }
 
 #slide-number > span {
@@ -38,7 +39,7 @@ html, body {
 }
 
 #thumbs > img {
-  border: 3px solid rgb(18, 18, 18);
+  border: 3px solid #121212;
   cursor: pointer;
   vertical-align: middle;
   margin: 1px;
@@ -53,7 +54,7 @@ html, body {
 
 #slideshow > div {
   position: absolute;
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
   text-align: center;
   height: 100%;
   width: 100%;
@@ -62,10 +63,4 @@ html, body {
 .slide {
   position: relative;
   height: 100%;
-}
-
-
-
-#logo {
-  height: 40px;
 }

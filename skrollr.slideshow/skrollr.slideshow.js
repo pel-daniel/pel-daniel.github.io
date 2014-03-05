@@ -12,7 +12,7 @@
       screensPerSlide: 1,
       screensPerTransition: .5,
       backgroundColor: 'rgb(18, 18, 18)',
-      borderColor: 'rgb(255, 255, 255)'
+      borderColor: 'rgb(230, 230, 230)'
     };
 
     var resizeThumbsContainer = function() {
@@ -45,7 +45,7 @@
 
     var appendControls = function() {
       $(options.controlsContainer).append(
-        '<span><span id="' + options.slideNumberContainer.substring(1) + '"></span></span>' +
+        '<div><div id="' + options.slideNumberContainer.substring(1) + '"></div></div>' +
         '<div id="progress-bar">' +
           '<div id="progress" data-0p="width: 0%;" data-end="width: 100%;"></div>' +
         '</div>');
@@ -61,9 +61,10 @@
 
     var appendSlide = function(index, slide) {
       $(options.slideshowContainer).append(
-        '<div id="s' + index + '" style="z-index:' + (slides.length - index) + '" ' +
-        'data-' + transitionStart(index + 1) + 'p="opacity: 1;" ' +
-        'data-' + screens(index + 1) + 'p="opacity: 0" >' +
+        '<div id="s' + index + '"' +
+        'data-' + transitionStart(index + 1) + 'p="opacity: 1"' +
+        'data-' + screens(index + 1) + 'p="opacity: 0; z-index:' + (slides.length - index) + '"' +
+        'data-' + (screens(index + 1) + 10) + 'p="z-index: -1">' +
           '<img class="slide" src="' + slide.s + '">' +
         '</div>');
     };
