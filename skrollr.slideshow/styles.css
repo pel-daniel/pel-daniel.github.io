@@ -10,6 +10,7 @@ html, body {
   position: fixed;
   top: 1%;
   left: 1%;
+  height: 98%;
 }
 
 #slide-number {
@@ -27,15 +28,13 @@ html, body {
 }
 
 #progress-bar {
-  border: 1px solid white;
-  margin-bottom: 5px;
-  background-color: rgba(0, 255, 0, 0.1);
+  margin: 0 3px 10px;
+  background-color: rgba(200, 200, 200, 0.1);
 }
 
 #progress {
   height: 20px;
-  background-color: green;
-  font-weight: bold;
+  background-color: #909090;
 }
 
 #thumbs > img {
