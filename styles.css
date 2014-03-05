@@ -1,3 +1,17 @@
+body {
+  font-family: Georgia;
+  font-size: 20px;
+}
+
+a {
+  color: #C0C0C0;
+  text-decoration: none;
+}
+
+p {
+  margin: 10px;
+}
+
 @font-face {
   font-family: 'Stalemate';
   src: url('Stalemate-Regular.ttf');
@@ -20,4 +34,29 @@
 #logo:hover {
   background-color: rgba(50, 50, 50, .4);
   border: 4px solid #C0C0C0;
+}
+
+#navigation {
+  margin-top: 170px;
+}
+
+.nav-element {
+  border: 4px solid rgb(18, 18, 18);
+  display: inline-block;
+  padding: 4px;
+}
+
+.nav-element:hover {
+  border: 4px solid  #C0C0C0;
+  background-color: rgba(50, 50, 50, .4);
+  padding: 4px;
+}
+
+.nav-element > div {
+  width: 320px;
+  display: inline-block;
+}
+
+.nav-element:first-child {
+  margin-right: 20px;
 }
