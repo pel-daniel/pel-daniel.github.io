@@ -9,6 +9,7 @@
       thumbsContainer: '#thumbs',
       slideNumberContainer: '#slide-number',
       controlsContainer: '#controls',
+      instructionsContainer: '#instructions',
       screensPerSlide: 1,
       screensPerTransition: .5,
       backgroundColor: 'rgb(18, 18, 18)',
@@ -18,9 +19,11 @@
     var resizeThumbsContainer = function() {
       var windowWidth = $(window).width();
       var imageWidth = $(window).height() * 0.98 / 680 * 1024;
+      var navWidth = windowWidth * 0.97 - imageWidth;
 
-      $(options.navContainer).width(windowWidth * 0.97 - imageWidth);
+      $(options.navContainer).width(navWidth);
       $(options.slideshowContainer).width(imageWidth);
+      $(options.instructionsContainer).width(imageWidth);
     };
 
     var screens = function(index) {
@@ -90,18 +93,3 @@
     $(window).resize(resizeThumbsContainer);
   }
 }) (jQuery);
-
-
-/*  $().ready(function(){
-    initSlides();
-    $('#thumbs > img').click(function() {
-      var top = $(this).data('thumb-number') * $(window).height() * (skrollr_slider.defaults.screens_per_slide + skrollr_slider.defaults.screens_per_transition) / 100;
-      $(window).scrollTop(top);
-    })
-
-    skrollr.init();
-
-    resizeThumbsContainer();
-    $(window).resize(resizeThumbsContainer);
-  });
-*/
