@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+
+    <title>Toniná</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="../index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Toniná</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="palenque.html">
+            <div>
+              <img src="http://farm3.staticflickr.com/2528/12982237155_4e9f20a75b_n.jpg" />
+              <h4 class="one-line">Palenque</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="misc-1.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3605/12982749714_55a3d102b8_n.jpg" />
+              <h4 class="one-line" title="Cañón del sumidero, Agua azul, Chinkultic, Corozal, Lagunas de Montebello, Misol-Ha">
+                Cañón del sumidero, Agua azul, Chinkultic, Corozal, Lagunas de Montebello, Misol-Ha
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm8.staticflickr.com/7302/12982685284_a760c5f31c",
+                      "http://farm4.staticflickr.com/3742/12982400343_8fa24dc57a",
+                      "http://farm3.staticflickr.com/2380/12982401993_84dabfbfe4",
+                      "http://farm8.staticflickr.com/7365/12982684024_b594cb4e8c",
+                      "http://farm4.staticflickr.com/3530/12982678014_038e1330e2",
+                      "http://farm4.staticflickr.com/3783/12982680704_385973bcc6",
+                      "http://farm4.staticflickr.com/3713/12982268165_d5e859072d",
+                      "http://farm8.staticflickr.com/7386/12982269355_195a673061",
+                      "http://farm4.staticflickr.com/3064/12982683904_983b13786c",
+                      "http://farm8.staticflickr.com/7390/12982400163_bf58f6de63",
+                      "http://farm8.staticflickr.com/7350/12982263185_6f3b5f9007"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>
