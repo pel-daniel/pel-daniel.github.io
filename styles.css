@@ -1,6 +1,21 @@
 body {
+  background-color: #121212;
+  color: #C0C0C0;
   font-family: Georgia;
   font-size: 20px;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+h4 {
+  text-align: left;
+  margin: 10px;
+  font-weight: normal;
 }
 
 a {
@@ -40,6 +55,11 @@ p {
   position: absolute;
   right: 0;
   bottom: 0;
+  height: 24px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #navigation {
@@ -51,6 +71,12 @@ p {
   border: 4px solid #909090;
   display: inline-block;
   padding: 4px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.nav-element:last-child {
+  margin-right: 0;
 }
 
 .nav-element:hover {
@@ -64,6 +90,20 @@ p {
   display: inline-block;
 }
 
-.nav-element:first-child {
-  margin-right: 20px;
+.nav-element > div > img {
+  height: 213px;
+}
+
+.total-galleries {
+  float: right;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.one-line {
+  height: 24px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
