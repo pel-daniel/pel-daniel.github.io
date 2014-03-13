@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+    <title>Morelia</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Morelia</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="guatemala.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3134/12982095785_6a95e78588_n.jpg" />
+              <h4>Guatemala</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="oaxaca.html">
+            <div>
+              <img src="http://farm3.staticflickr.com/2303/12982268153_ddcc59bb14_n.jpg" />
+              <h4>Oaxaca</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm8.staticflickr.com/7306/12982176875_a1fa85ae65",
+                      "http://farm8.staticflickr.com/7302/12982179065_d0bd91045b",
+                      "http://farm8.staticflickr.com/7358/12982592974_8fb719cb8a",
+                      "http://farm8.staticflickr.com/7420/12982591074_584412644f",
+                      "http://farm4.staticflickr.com/3579/12982314793_2098b2dcd3",
+                      "http://farm8.staticflickr.com/7400/12982594004_aca63bf389",
+                      "http://farm3.staticflickr.com/2314/12982589634_1230e6e1f6",
+                      "http://farm4.staticflickr.com/3434/12982591674_217460a098"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>

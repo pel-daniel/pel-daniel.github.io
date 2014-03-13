@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+    <title>Oaxaca</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Oaxaca</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="morelia.html">
+            <div>
+              <img src="http://farm8.staticflickr.com/7306/12982176875_a1fa85ae65_n.jpg" />
+              <h4>Morelia</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="puebla.html">
+            <div>
+              <img src="http://farm3.staticflickr.com/2123/12982153085_8df7d3e981_n.jpg" />
+              <h4>Puebla</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm3.staticflickr.com/2303/12982268153_ddcc59bb14",
+                      "http://farm8.staticflickr.com/7389/12982545164_a922e0f424",
+                      "http://farm4.staticflickr.com/3335/12982545224_3fe178af45",
+                      "http://farm3.staticflickr.com/2140/12982128705_73b1146c6e",
+                      "http://farm8.staticflickr.com/7400/12982542604_39c6eefc08",
+                      "http://farm3.staticflickr.com/2331/12982131325_532706da6b",
+                      "http://farm4.staticflickr.com/3135/12982263403_9de3856d63",
+                      "http://farm4.staticflickr.com/3559/12982267573_6c0734fe78",
+                      "http://farm8.staticflickr.com/7389/12982537624_3180cb6cde",
+                      "http://farm3.staticflickr.com/2851/12982124345_f2dfea1df1",
+                      "http://farm3.staticflickr.com/2039/12982539604_708a5f873d",
+                      "http://farm4.staticflickr.com/3586/12982537604_9cf82af0c2",
+                      "http://farm8.staticflickr.com/7369/12982538864_231d742ba0"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>
