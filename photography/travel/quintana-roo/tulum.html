@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+
+    <title>Tulum</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="../index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Tulum</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="../puebla.html">
+            <div>
+              <img src="http://farm3.staticflickr.com/2123/12982153085_8df7d3e981_n.jpg" />
+              <h4 class="one-line">Puebla</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="misc.html">
+            <div>
+              <img src="http://farm8.staticflickr.com/7364/12982843804_9f7b47d4e8_n.jpg" />
+              <h4 class="one-line" title="Cancún, Cobá, Cozumel, Isla Mujeres, Puerto Morelos">
+                Cancún, Cobá, Cozumel, Isla Mujeres, Puerto Morelos
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm8.staticflickr.com/7397/12982717063_793e33aaa9",
+                      "http://farm3.staticflickr.com/2336/12982999984_9035a8ff78",
+                      "http://farm8.staticflickr.com/7349/12982582785_93c77eaf9f",
+                      "http://farm3.staticflickr.com/2094/12982585155_d04ed5201c",
+                      "http://farm8.staticflickr.com/7308/12982720043_8dcb287171",
+                      "http://farm4.staticflickr.com/3829/12982586285_b82d619419",
+                      "http://farm4.staticflickr.com/3383/12983003334_eb1f3e8f5b",
+                      "http://farm3.staticflickr.com/2828/12983002944_0a6d132cd9",
+                      "http://farm3.staticflickr.com/2644/12982581585_e27ba3eda2",
+                      "http://farm3.staticflickr.com/2613/12982720523_f17c1e05c8",
+                      "http://farm8.staticflickr.com/7400/12983002934_999a4d8974",
+                      "http://farm4.staticflickr.com/3379/12982583555_ae9b0537f8"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>
