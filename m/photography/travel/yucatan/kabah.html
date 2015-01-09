@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+
+    <title>Kabah</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="../index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Kabah</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="ek-balam.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3224/12982810225_4aabf8b157_n.jpg" />
+              <h4>Ek Balam</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="mayapan.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3548/12983046395_68be800ffe_n.jpg" />
+              <h4>Mayapán</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm3.staticflickr.com/2303/12982980083_d28c7ace48",
+                      "http://farm4.staticflickr.com/3531/12982841425_f739772aa7",
+                      "http://farm8.staticflickr.com/7408/12982841655_1147bb73c7",
+                      "http://farm4.staticflickr.com/3137/12982851295_243040e196",
+                      "http://farm4.staticflickr.com/3792/12983264484_393974de49",
+                      "http://farm8.staticflickr.com/7426/12983266594_309c056a19",
+                      "http://farm8.staticflickr.com/7405/12983260864_33fd5f4a14",
+                      "http://farm8.staticflickr.com/7324/12982842055_2b09490da4",
+                      "http://farm3.staticflickr.com/2685/12982851055_b40c3e939d",
+                      "http://farm4.staticflickr.com/3013/12982846215_378ed33f63"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+
+    <title>Cañón del sumidero, Agua azul, Chinkultic, Corozal, Lagunas de Montebello, Misol-Ha</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="../index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title" title="Cañón del sumidero, Agua azul, Chinkultic, Corozal, Lagunas de Montebello, Misol-Ha">
+          Cañón del sumidero, Agua azul, Chinkultic, Corozal, Lagunas de Montebello, Misol-Ha
+        </div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="tonina.html">
+            <div>
+              <img src="http://farm8.staticflickr.com/7302/12982685284_a760c5f31c_n.jpg" />
+              <h4 class="one-line">Toniná</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="misc-2.html">
+            <div>
+              <img src="http://farm8.staticflickr.com/7351/12982226935_d2072d7a24_n.jpg" />
+              <h4 class="one-line" title="Chiapa de Corzo, Bonampak, Lacanjá, San Cristóbal de las Casas, Yaxchilán">
+                Chiapa de Corzo, Bonampak, Lacanjá, San Cristóbal de las Casas, Yaxchilán
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm4.staticflickr.com/3605/12982749714_55a3d102b8",
+                      "http://farm3.staticflickr.com/2371/12982350553_92e368d982",
+                      "http://farm4.staticflickr.com/3459/12982213465_909d8225db",
+                      "http://farm4.staticflickr.com/3291/12982347793_aa024c1364",
+                      "http://farm4.staticflickr.com/3552/12982209675_cbd5f819f0",
+                      "http://farm4.staticflickr.com/3027/12982748644_66f436b7df",
+                      "http://farm8.staticflickr.com/7329/12982468193_0ab7f367f3",
+                      "http://farm4.staticflickr.com/3521/12982448173_0921bca2ab",
+                      "http://farm4.staticflickr.com/3068/12982448473_3b3a235bc6",
+                      "http://farm4.staticflickr.com/3825/12982454863_1a75832599",
+                      "http://farm8.staticflickr.com/7435/12982734334_ce115194b0",
+                      "http://farm3.staticflickr.com/2144/12982472073_12bcf769e4",
+                      "http://farm4.staticflickr.com/3451/12982333515_e6c3d1611f"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>

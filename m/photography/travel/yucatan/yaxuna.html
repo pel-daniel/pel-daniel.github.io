@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+
+    <title>Yaxuná</title>
+
+  </head>
+
+  <body>
+
+    <div>
+      <div id="nav">
+
+        <a href="../index.html">
+          <div id="logo">DG</div>
+        </a>
+
+        <div id="controls"></div>
+        <div id="thumbs"></div>
+
+        <div id="title">Yaxuná</div>
+      </div>
+
+      <div id="instructions">Scroll</div>
+
+      <div id="slideshow">
+        <div id="navigation">
+          <a class="nav-element" href="uxmal.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3433/12983275613_6f6e216dbc_n.jpg" />
+              <h4 class="one-line">Uxmal</h4>
+            </div>
+          </a>
+          <a class="nav-element" href="misc.html">
+            <div>
+              <img src="http://farm4.staticflickr.com/3194/12982933443_66c60c1e3c_n.jpg" />
+              <h4 class="one-line" title="Dzibilchaltún, Dzitnup, Mérida, Oxkintok, Valladolid">
+                Dzibilchaltún, Dzitnup, Mérida, Oxkintok, Valladolid
+              </h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
+    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
+
+    <script type="text/javascript">
+
+      var slides = [
+                      "http://farm8.staticflickr.com/7369/12984073884_ec565abd60",
+                      "http://farm8.staticflickr.com/7347/12983654475_d6731d987f",
+                      "http://farm8.staticflickr.com/7327/12983797543_433eda4f43",
+                      "http://farm3.staticflickr.com/2694/12984071204_4abcfd2c51",
+                      "http://farm8.staticflickr.com/7333/12983790833_e0d158ebfb",
+                      "http://farm8.staticflickr.com/7442/12983659345_8ce86c21fd",
+                      "http://farm4.staticflickr.com/3699/12983800133_0ae778342d",
+                      "http://farm8.staticflickr.com/7393/12983661015_c541eaf16c",
+                      "http://farm4.staticflickr.com/3183/12983787933_72694483e4",
+                      "http://farm8.staticflickr.com/7309/12984071234_788e29ecc7",
+                      "http://farm4.staticflickr.com/3218/12983653805_6f0cdaccb6",
+                      "http://farm8.staticflickr.com/7376/12983788073_79f49e5e1a",
+                      "http://farm8.staticflickr.com/7302/12983650625_21b108aa74",
+                      "http://farm3.staticflickr.com/2863/12983800813_43f3dc1e4f",
+                      "http://farm8.staticflickr.com/7398/12983648805_3b61c0891f"
+                   ];
+
+      $().ready(function() {
+        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
+      });
+
+    </script>
+  </body>
+</html>
