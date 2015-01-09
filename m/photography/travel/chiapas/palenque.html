@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" href="../../../skrollr.slideshow/styles.css">
-    <link rel="stylesheet" type="text/css" href="../../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../../../../styles.css">
+    <link rel="stylesheet" type="text/css" href="../../m-styles.css">
 
     <title>Palenque</title>
 
@@ -14,61 +14,27 @@
   <body>
 
     <div>
-      <div id="nav">
-
-        <a href="../index.html">
+      <div>
+        <a href="index.html">
           <div id="logo">DG</div>
         </a>
 
-        <div id="controls"></div>
-        <div id="thumbs"></div>
-
-        <div id="title">Palenque</div>
+        <h2>Palenque</h2>
       </div>
 
-      <div id="instructions">Scroll</div>
-
-      <div id="slideshow">
-        <div id="navigation">
-          <a class="nav-element" href="../campeche.html">
-            <div>
-              <img src="http://farm4.staticflickr.com/3747/12919229573_9ca62e1c97_n.jpg" />
-              <h4>Campeche</h4>
-            </div>
-          </a>
-          <a class="nav-element" href="tonina.html">
-            <div>
-              <img src="http://farm8.staticflickr.com/7302/12982685284_a760c5f31c_n.jpg" />
-              <h4>Toniná</h4>
-            </div>
-          </a>
-        </div>
+      <div id="navigation">
+        <img src="http://farm3.staticflickr.com/2528/12982237155_4e9f20a75b_z.jpg" />
+        <img src="http://farm8.staticflickr.com/7337/12982243795_f90c5cbdd1_z.jpg" />
+        <img src="http://farm3.staticflickr.com/2516/12982374193_02b2100de3_z.jpg" />
+        <img src="http://farm4.staticflickr.com/3539/12982381223_e1235a39f7_z.jpg" />
+        <img src="http://farm3.staticflickr.com/2500/12982381153_9a78b7c5dc_z.jpg" />
+        <img src="http://farm8.staticflickr.com/7323/12982242495_24ab1f2905_z.jpg" />
+        <img src="http://farm8.staticflickr.com/7374/12982651794_c5c54cffaf_z.jpg" />
+        <img src="http://farm4.staticflickr.com/3509/12982242015_50b734cd72_z.jpg" />
+        <img src="http://farm4.staticflickr.com/3173/12982654724_4fce330201_z.jpg" />
+        <img src="http://farm8.staticflickr.com/7450/12982652434_1f65994a70_z.jpg" />
       </div>
     </div>
 
-    <script type="text/javascript" src="../../../skrollr.slideshow/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.min.js"></script>
-    <script type="text/javascript" src="../../../skrollr.slideshow/skrollr.slideshow.min.js"></script>
-
-    <script type="text/javascript">
-
-      var slides = [
-                      "http://farm3.staticflickr.com/2528/12982237155_4e9f20a75b",
-                      "http://farm8.staticflickr.com/7337/12982243795_f90c5cbdd1",
-                      "http://farm3.staticflickr.com/2516/12982374193_02b2100de3",
-                      "http://farm4.staticflickr.com/3539/12982381223_e1235a39f7",
-                      "http://farm3.staticflickr.com/2500/12982381153_9a78b7c5dc",
-                      "http://farm8.staticflickr.com/7323/12982242495_24ab1f2905",
-                      "http://farm8.staticflickr.com/7374/12982651794_c5c54cffaf",
-                      "http://farm4.staticflickr.com/3509/12982242015_50b734cd72",
-                      "http://farm4.staticflickr.com/3173/12982654724_4fce330201",
-                      "http://farm8.staticflickr.com/7450/12982652434_1f65994a70"
-                   ];
-
-      $().ready(function() {
-        $.skrollrSlideshow($.map(slides, function(value) { return { t: value + '_t.jpg', s: value + '_b.jpg' } }));
-      });
-
-    </script>
   </body>
 </html>
