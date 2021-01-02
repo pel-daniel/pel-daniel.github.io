@@ -49,10 +49,15 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
+a {
+  border-bottom: 0.1em solid;
+  display: inline-block;
+  margin-bottom: 0.1em;
+}
+
 a, a:hover, a:visited, a:focus {
   color: inherit;
   text-decoration: none;
-  border-bottom: 0.1em solid;
 }
 
 p {
@@ -102,6 +107,7 @@ img {
 
 a.no-underline {
   border: none;
+  margin-bottom: none;
 }
 
 .muted {
