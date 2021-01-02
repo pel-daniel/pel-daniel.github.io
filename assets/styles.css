@@ -29,6 +29,10 @@ body {
   margin-right: 0;
 }
 
+.v-center-align {
+  align-items: center;
+}
+
 .icon {
   width: 2rem;
 }
