@@ -92,8 +92,13 @@ li {
   color: var(--text-gray-500);
 }
 
-.icon {
+.icon-sm {
   width: 2rem;
+}
+
+.icon-md {
+  font-size: 3rem;
+  width: 3rem;
 }
 
 .icon-lg {
