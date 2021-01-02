@@ -88,11 +88,16 @@ li {
   margin-bottom: 2rem;
 }
 
+a.no-underline {
+  border: none;
+}
+
 .muted {
   color: var(--text-gray-500);
 }
 
 .icon-sm {
+  font-size: 2rem;
   width: 2rem;
 }
 
