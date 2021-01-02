@@ -1,0 +1,37 @@
+:root {
+  --text-gray-700: rgb(55, 65, 81);
+  --text-gray-600: rgb(75, 85, 99);
+}
+
+* {
+  display: relative;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--text-gray-700);
+}
+
+.col-2 {
+  display: flex;
+}
+
+.col-2 > div:first-child {
+  margin-right: 1rem;
+}
+
+#cv .header-headshot {
+  width: 120px;
+}
+
+#cv .header-headshot img {
+  width: 100%;
+}
+
+#cv .header-title {
+  font-size: 5rem;
+}
