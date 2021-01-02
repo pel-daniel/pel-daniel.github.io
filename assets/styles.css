@@ -1,3 +1,4 @@
+/* Colors 'borrowed' from tailwind.css */
 :root {
   --text-gray-700: rgb(55, 65, 81);
   --text-gray-600: rgb(75, 85, 99);
@@ -16,12 +17,20 @@ body {
   color: var(--text-gray-700);
 }
 
-.col-2 {
+.row {
   display: flex;
 }
 
-.col-2 > div:first-child {
+.col {
   margin-right: 1rem;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.icon {
+  width: 2rem;
 }
 
 #cv .header-headshot {
