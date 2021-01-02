@@ -5,7 +5,7 @@
 }
 
 * {
-  display: relative;
+  position: relative;
   margin: 0;
 }
 
