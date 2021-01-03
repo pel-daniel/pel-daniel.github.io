@@ -3,9 +3,11 @@
   --text-gray-700: rgb(55, 65, 81);
   --text-gray-600: rgb(75, 85, 99);
   --text-gray-500: rgb(107, 114, 128);
+  --text-gray-400: rgb(149, 154, 164);
 }
 
 * {
+  line-height: 1;
   margin: 0;
   padding: 0;
   position: relative;
@@ -35,25 +37,36 @@ h1 {
   font-size: 5rem;
 }
 
-h2, h3, h4 {
-  color: var(--text-gray-500);
-}
-
 h2 {
+  color: var(--text-gray-400);
   font-size: 3rem;
   margin-bottom: 0.5em;
 }
 
 h3 {
   color: var(--text-gray-700);
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+h4 {
+  color: var(--text-gray-500);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: var(--text-gray-400);
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 a {
   border-bottom: 0.1em solid;
   display: inline-block;
   margin-bottom: 0.1em;
+  padding-bottom: 0.4rem;
 }
 
 a, a:hover, a:visited, a:focus {
@@ -67,6 +80,7 @@ p {
 
 li {
   margin-left: 1.2em;
+  line-height: 1.7;
 }
 
 img {
@@ -103,21 +117,25 @@ img {
   vertical-align: top;
 }
 
-.mb-05 {
-  margin-bottom: 0.5em;
+.mb-xs {
+  margin-bottom: 0.8rem;
+}
+
+.mb-sm {
+  margin-bottom: 1.2rem;
+}
+
+.mb-md {
+  margin-bottom: 2.4rem;
 }
 
 .mb-lg {
-  margin-bottom: 3rem;
+  margin-bottom: 4.8rem;
 }
 
 a.no-underline {
   border: none;
   margin-bottom: none;
-}
-
-.muted {
-  color: var(--text-gray-500);
 }
 
 .icon-md {
@@ -126,7 +144,7 @@ a.no-underline {
 }
 
 .icon-lg {
-  margin: 0 auto;
+  margin: 0 auto 1.2rem;
   width: 6rem;
 }
 
@@ -144,6 +162,7 @@ a.no-underline {
 @media (max-width: 600px) {
   a {
     display: inline;
+    padding-bottom: 0;
   }
 
   li {
@@ -171,14 +190,6 @@ a.no-underline {
 
   .col {
     margin-right: 0;
-  }
-
-  .mb-lg {
-    margin-bottom: 5rem;
-  }
-
-  .mb-sm-md {
-    margin-bottom: 4rem;
   }
 
   .icon-lg {
