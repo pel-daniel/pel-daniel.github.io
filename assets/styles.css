@@ -93,6 +93,10 @@ img {
   align-items: center;
 }
 
+.v-top-align {
+  vertical-align: top;
+}
+
 .mb-05 {
   margin-bottom: 0.5em;
 }
