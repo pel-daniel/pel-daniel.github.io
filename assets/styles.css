@@ -146,6 +146,11 @@ a.no-underline {
     display: inline;
   }
 
+  li {
+    list-style: inside;
+    margin-left: 0;
+  }
+
   ul {
     margin: 0 auto;
     width: 85%;
