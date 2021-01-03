@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  transition: all 500ms;
 }
 
 @font-face {
@@ -73,8 +74,9 @@ img {
 }
 
 .wrapper {
-  width: 80rem;
   margin: 1.5rem auto;
+  min-width: 30rem;
+  width: 80rem;
 }
 
 .row {
@@ -83,6 +85,10 @@ img {
 
 .col {
   margin-right: 1.5rem;
+}
+
+.row-sm > .col {
+  margin-right: 1rem;
 }
 
 .col:last-child {
@@ -120,10 +126,61 @@ a.no-underline {
 }
 
 .icon-lg {
-  font-size: 6rem;
+  margin: 0 auto;
   width: 6rem;
 }
 
 #cv .header-headshot {
-  width: 120px;
+  margin: 0 auto;
+  width: 12rem;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 600px) {
+  a {
+    display: inline;
+  }
+
+  ul {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .wrapper {
+    text-align: center;
+    width: 90%;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .row-sm {
+    display: inline-flex;
+  }
+
+  .col {
+    margin-right: 0;
+  }
+
+  .mb-lg {
+    margin-bottom: 5rem;
+  }
+
+  .mb-sm-md {
+    margin-bottom: 4rem;
+  }
+
+  .icon-lg {
+    width: 10rem;
+  }
+
+  #cv .header-headshot {
+    width: 15rem;
+  }
 }
